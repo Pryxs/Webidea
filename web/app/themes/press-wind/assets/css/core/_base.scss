@@ -1,0 +1,55 @@
+body{
+    font-family: $primary-font;
+    color: $text-color-grey-dark;
+    font-size: 20px;
+}
+
+h1,
+h2,
+h3
+{
+    font-weight: lighter;
+}
+
+h1,
+h2,
+h3,
+h4
+{
+    color: $text-color-black;
+}
+
+h1{
+    font-size: 64px;
+}
+
+h2{
+    font-size: 48px;
+}
+
+h3{
+    font-size: 32px;
+}
+
+h4{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p{
+    line-height: 1.45em;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 28px;
+    box-sizing: content-box;
+}
+
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+  }

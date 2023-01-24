@@ -1,0 +1,20 @@
+.link{
+    font-weight: bold;
+    color: $text-color-black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+
+    &::after{
+        content: url("app/themes/press-wind/assets/media/arrow-right-icon.svg");
+        display: inline-block;
+        margin-top: .2em;
+        margin-left: .5em;
+    }
+
+    &:hover, &:active{
+        filter: invert(51%) sepia(44%) saturate(7499%) hue-rotate(175deg) brightness(104%) contrast(101%);
+
+    }
+}

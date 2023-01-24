@@ -1,0 +1,88 @@
+.home-page{
+    .service{
+
+        .layout{
+            align-items: center;
+            grid-row-gap: 8rem;
+        }
+
+        &_container{
+            display: contents;
+        }
+
+        &_content{
+            height: fit-content;
+
+            span{
+                text-transform: uppercase;
+                color: $secondary-color;
+                font-size: 12px;
+                font-weight: bold;
+                display: block;
+                margin-bottom: 1em;
+            }
+
+            p{
+                margin: 2rem 0;
+            }
+        }
+
+        &_container:first-child{    
+            .service_content{
+                grid-column: span 6;
+            }
+
+            .service_image{
+                margin-top: -6rem;
+                grid-column: 8 / span 4;
+            }
+        }
+
+        &_container:nth-child(2){    
+            .service_content{
+                grid-column: 8 / span 4;
+
+                ul{
+                    margin-bottom: 2rem;
+
+                    li{
+                        margin-bottom: .5em;
+                        display: flex;
+                        align-items: baseline;
+
+                        &::before{
+                            content: " ";
+                            display: inline-block;
+                            min-width: 8px !important;
+                            min-height: 8px !important;
+                            background-color: $tertiary-color;
+                            border-radius: 2px;
+                            margin-right: .5em;
+                            margin-bottom: .2em;
+                        }
+
+                        p{
+                            margin: 0;
+                        }
+                    }
+                }
+
+                >p{
+                    margin-bottom: 1em;
+                }
+            }
+
+            .service_image{
+                grid-column: span 6;
+                display: flex;
+                justify-content: end;
+                background-image: url("app/themes/press-wind/assets/media/bg-img.jpg");
+                background-repeat: no-repeat;
+
+                img{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.header{
+    transition: .3s ease-out;
+
+    #Logo{
+        transition: .3s ease-out;
+    }
+}
+
+body.menu-is-open{   
+    position: fixed; 
+    inline-size: 100%;
+    overflow-y:scroll;
+
+    .header{
+        background-color: $text-color-white;
+        // transition: .4s ease-in-out;
+
+        .header_navigation{        
+            &_submenu{
+                opacity: 1;
+                transition: .4s ease-in-out;
+            }
+        }
+
+        .header_line{
+            transition: .1s ease-in;
+            transition-delay: .3s;
+            opacity: 1;
+        }
+
+        #burger{
+            span{
+                &:first-child{
+                    animation: .6s first-line ease-in-out forwards;
+                }
+
+                &:nth-child(2){
+                    animation: .6s second-line ease-in-out forwards;
+                }
+
+                &:nth-child(3){
+                    animation: .6s third-line ease-in-out forwards;
+                }
+            }
+        }
+
+        #Logo{
+            color: $text-color-black;
+
+            #star{
+                color: $secondary-color;
+            }
+        }
+    }
+
+    #filter{
+        transition: .4s ease-in-out;
+        visibility: visible;
+    }
+}
+
+
+@keyframes first-line {
+    35% {
+        top: 31px;
+        transform: translateX(-50%) rotate(0);
+    }
+    45%,
+    100% {
+        top: 31px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+}
+
+@keyframes second-line {
+    35% {
+        opacity: 1;
+    }
+    45%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes third-line {
+    35% {
+        top: 31px;
+        transform: translateX(-50%) rotate(0);
+    }
+    45%,
+    100% {
+        top: 31px;
+        transform: translateX(-50%) rotate(-45deg);
+    }
+}

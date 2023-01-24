@@ -1,0 +1,11 @@
+.layout{
+    @extend .grid;
+    padding: 0 2em;
+    max-width: 1520px;
+    margin: auto;
+    height: 100%;
+
+    &.-auto-rows{
+        grid-auto-rows: 1fr;
+    }
+}
