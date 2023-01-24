@@ -1,51 +1,5 @@
 .home-page{
-    .hero{
-        height: 100vh;  
-        background-image: url("app/themes/press-wind/assets/media/hero-bg.jpg");
-        background-position: center 0;
-        display: flex;
-        flex-direction: column;
-        color: $text-color-white;
-
-        &_branding{
-            grid-column: 1/7;
-            grid-row: 2;
-            align-self: end;
-
-            &_title{
-                color: $text-color-white;
-                margin-bottom: 2rem;
-                line-height: 1.1;
-
-                &.-strong{
-                    font-weight: bold;
-                }
-            }
-        }
-
-        &_anchor{
-            grid-row: 3;
-            grid-column: 1/2;
-            align-self: end;
-            width: fit-content;
-            transform: scale(-1, -1) translateX(-100%);
-            transform-origin: left;
-            writing-mode: vertical-lr;
-            margin-bottom: 6rem;
-            position: relative;
-
-
-            &::after{
-                content: " ";
-                position: absolute;
-                display: block;
-                background-color: $text-color-white;
-                top: calc(-20px - 2rem);
-                left: 50%;
-                transform: translateX(-50%);
-                height: 20px;
-                width: 2px;
-            }
-        }
+    .contact{
+        margin-top: 6rem;
     }
 }

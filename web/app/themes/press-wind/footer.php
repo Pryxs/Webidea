@@ -39,7 +39,7 @@
 
     <address>
       <p>Nous Contacter</p>
-      <span class="address">2, rue Maureuce Barrès 57000 METZ</span>
+      <span class="address">2, rue Maureuce Barrès <br> 57000 METZ</span>
       <span class="tel">+33 3 87 52 12 12</span>
       <a href="mailto:hello@webidea.fr">hello@webidea.fr</a>
     </address>

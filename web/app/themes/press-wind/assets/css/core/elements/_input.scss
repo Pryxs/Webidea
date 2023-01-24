@@ -1,0 +1,49 @@
+.form-group{
+    position: relative;
+
+    label{
+        font-size: 14px;
+        position: absolute;
+        top: 2em;
+        transform: translateY(-50%);
+        width: 90px;
+        text-align: center;
+        color: $text-color-grey-dark;
+    }
+
+    input:not(input[type=checkbox]),
+    select
+    {
+        width: -webkit-fill-available;
+        padding-left: 90px;
+    }
+
+    textarea{
+        width: -webkit-fill-available;
+        padding: 3em 1em 0 1em;
+        line-height: 2em;
+    }
+}
+
+input[type=text],
+input[type=mail],
+select
+{
+    font-family: inherit;
+    height: 4em;
+    border-radius: 5px;
+    border: 1px solid $text-color-grey;
+}
+
+textarea{
+    font-family: inherit;
+    border-radius: 5px;
+    border: 1px solid $text-color-grey;
+}
+
+input[type=text],
+input[type=mail],
+select,
+textarea:focus{
+    outline: none
+}

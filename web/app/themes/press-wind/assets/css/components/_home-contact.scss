@@ -1,0 +1,74 @@
+.contact{
+    &_content{
+        grid-column: 2 / span 3;
+        grid-row: span 5;
+
+        span{
+            text-transform: uppercase;
+            color: $secondary-color;
+            font-size: 12px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 1em;
+        }
+
+        p{
+            margin: 2rem 0;
+        }
+    }
+
+    &_form{
+        display: contents;
+
+        &_surname{
+            grid-column: 6 / span 3;
+        }
+
+        &_name{
+            grid-column: 9 / span 3;
+        }
+
+        &_mail{
+            grid-column: 6 / span 3;
+            grid-row: 2;
+        }
+
+        &_phone{
+            grid-column: 9 / span 3;
+            grid-row: 2;
+        }
+
+        .line{
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: $text-color-grey-light;
+            grid-column: 6 / span 6;
+            grid-row: 3;
+        }
+
+        &_subject{
+            grid-column: 6 / span 3;
+            grid-row: 4;
+        }
+
+        &_message{
+            grid-column: 6 / span 6;
+            grid-row: 5;
+        }
+
+        &_checkbox{
+            grid-column: 6 / span 6;
+            grid-row: 6;
+            font-size: 12px;
+            display: flex;
+            gap: 1em;
+            margin-top: -1em;
+        }
+
+        input[type=submit]{
+            grid-row: 7;
+            grid-column: 6;
+        }
+    }
+}
