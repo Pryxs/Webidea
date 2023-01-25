@@ -1,9 +1,9 @@
 import toggleMenu from "./menu.js";
-// import manageForm from "./form.js";
+import manageSlider from "./slider.js";
 
 function main() {
   toggleMenu();
-  // manageForm();
+  manageSlider();
 }
 
 document.addEventListener('DOMContentLoaded', () => {

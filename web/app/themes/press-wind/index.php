@@ -7,6 +7,8 @@
 
     <?php get_template_part( 'template-parts/home-service'); ?>
 
+    <?php get_template_part( 'template-parts/home-slider'); ?>
+
     <?php get_template_part( 'template-parts/home-contact'); ?>
 </main>
 
