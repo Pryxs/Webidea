@@ -8,7 +8,21 @@
             </p>
         </div>
 
-        <form id="contact-form" class="contact_form">
+        <form id="contact-form" class="contact_form" method="post" action="<?php echo admin_url( 'admin-ajax.php' ); ?>">
+            <input 
+                type="hidden" 
+                name="nonce" 
+                id="nonce"
+                value="<?php echo wp_create_nonce( 'send_message' ); ?>"
+            > 
+
+            <input
+                type="hidden"
+                name="action"   
+                id="action"
+                value="send_message"
+            >
+
             <div class="form-group contact_form_surname">
                 <label for="nom">Nom</label>
                 <input id="surname" name="nom" type="text"/>
@@ -21,7 +35,7 @@
 
             <div class="form-group contact_form_mail">
                 <label for="mail">Adresse email</label>
-                <input id="mail" name="mail" type="mail"/>
+                <input id="mail" name="mail" type="email"/>
             </div>
 
             <div class="form-group contact_form_phone">
@@ -35,8 +49,9 @@
                 <label for="sujet">Sujet</label>
                 <select id="subject" name="sujet">
                     <option value="">Choisissez un sujet</option>
-                    <option value="dog">Dog</option>
-                    <option value="dog">Dog</option>
+                    <option value="subject">Sujet 1</option>
+                    <option value="subject">Sujet 2</option>
+                    <option value="subject">Sujet 3</option>
                 </select>
             </div>
 
@@ -51,6 +66,11 @@
             </div>
 
             <input class="button" type="submit" value="Envoyer">
+
+            <div id="toast" class="toast">
+                message envoyé avec succès
+            </div>
         </form>
     </div>
 </div>
+

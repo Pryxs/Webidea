@@ -41,5 +41,8 @@
   ],
   "volta": {
     "node": "16.16.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.3"
   }
 }

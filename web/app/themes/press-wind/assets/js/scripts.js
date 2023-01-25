@@ -1,9 +1,9 @@
 import toggleMenu from "./menu.js";
-
+// import manageForm from "./form.js";
 
 function main() {
   toggleMenu();
-
+  // manageForm();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,14 +13,4 @@ document.addEventListener('DOMContentLoaded', () => {
 // disable transition until window is completly loaded
 window.addEventListener('load', (event) => {
   document.querySelector('.preload').classList.remove("preload");
-
-  const form = document.getElementById('contact-form');
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    console.log(e);
-
-    let name = document.querySelector('#name').value;
-  });
-
 });

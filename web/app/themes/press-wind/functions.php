@@ -58,3 +58,51 @@ function setup()
 }
 
 add_action('after_setup_theme', __NAMESPACE__ . '\setup');
+
+
+
+function register_assets() {
+  wp_enqueue_script('jquery' );
+
+  wp_enqueue_script( 
+    'manageForm', 
+    get_template_directory_uri() . '/assets/js/form.js', [ 'jquery' ], 
+    '1.0', 
+    true 
+  );
+}
+
+add_action( 'wp_enqueue_scripts',  __NAMESPACE__ . '\register_assets');
+
+
+
+
+add_action( 'wp_ajax_send_message', __NAMESPACE__ . '\send_message' );
+add_action( 'wp_ajax_nopriv_send_message',  __NAMESPACE__ .'\send_message' );
+
+function send_message() {
+  if(!isset($_REQUEST['nonce']) or !wp_verify_nonce($_REQUEST['nonce'], 'send_message')){
+    wp_send_json_error( "Non autorisé", 403 );
+  }
+    
+  if(
+    $_POST['surname'] === '' or
+    $_POST['name'] === '' or
+    $_POST['mail'] === '' or
+    $_POST['phone'] === '' or
+    $_POST['subject'] === '' or
+    $_POST['message'] === ''
+  ) {
+    wp_send_json_error( "Champ manquant.", 403 );
+  }
+
+  $surname = sanitize_text_field( $_POST['surname'] );
+  $name = sanitize_text_field( $_POST['name'] );
+  $mail = sanitize_text_field( $_POST['mail'] );
+  $phone = sanitize_text_field( $_POST['phone'] );
+  $subject = sanitize_text_field( $_POST['subject'] );
+  $message = sanitize_text_field( $_POST['message'] );
+
+    
+	wp_send_json_success( 'succès' );
+}

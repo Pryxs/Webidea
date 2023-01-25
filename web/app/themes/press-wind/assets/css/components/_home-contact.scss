@@ -1,4 +1,6 @@
 .contact{
+    position: relative;
+
     &_content{
         grid-column: 2 / span 3;
         grid-row: span 5;
@@ -70,5 +72,37 @@
             grid-row: 7;
             grid-column: 6;
         }
+
+        .toast{
+            grid-column: 6 / span 6;
+            grid-row: 8;
+            border-radius: 5px;
+            background-color: #27ae60;
+            color:$text-color-white;
+            padding: 1rem 2rem;
+            font-size: 14px;
+            text-align: center;
+            opacity: 0;
+            transition: .4s ease-out;
+
+            &.-launch{
+                animation: toast 4s ease-in-out;
+            }
+        }
+    }
+}
+
+@keyframes toast {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
