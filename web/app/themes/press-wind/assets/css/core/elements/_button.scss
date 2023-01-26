@@ -12,3 +12,9 @@
         background-color: $primary-color;
     }
 }
+
+@media screen and (max-width: $large) { 
+    .button{
+        font-size: 16px;
+    }
+}

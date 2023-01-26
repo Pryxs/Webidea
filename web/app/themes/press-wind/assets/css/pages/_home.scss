@@ -7,3 +7,20 @@
         margin-top: 10rem;
     }
 }
+
+
+@media screen and (max-width: $large) { 
+    .home-page{
+        .service{
+            margin-top: 4rem;
+        }
+
+        .contact{
+            margin-top: 6rem;
+        }
+    
+        .slider{
+            margin-top: 6rem;
+        }
+    }
+}

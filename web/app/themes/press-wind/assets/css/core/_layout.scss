@@ -9,3 +9,11 @@
         grid-auto-rows: 1fr;
     }
 }
+
+@media screen and (max-width: $large) { 
+    .layout{
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 14px;
+        padding: 0 1.5rem;
+    }
+}

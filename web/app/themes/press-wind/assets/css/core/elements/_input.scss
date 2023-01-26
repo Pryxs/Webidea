@@ -14,12 +14,12 @@
     input:not(input[type=checkbox]),
     select
     {
-        width: -webkit-fill-available;
+        width: 100%;
         padding-left: 90px;
     }
 
     textarea{
-        width: -webkit-fill-available;
+        width: 100%;
         padding: 3em 1em 0 1em;
         line-height: 2em;
     }

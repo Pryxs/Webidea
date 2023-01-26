@@ -40,6 +40,10 @@ p{
     line-height: 1.45em;
 }
 
+#page{
+    overflow-y: hidden;
+}
+
 .grid{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -52,4 +56,27 @@ p{
     -moz-transition: none !important;
     -ms-transition: none !important;
     -o-transition: none !important;
+}
+
+@media screen and (max-width: $large) { 
+    body{
+        font-size: 16px;
+    }
+
+    
+    h1{
+        font-size: 32px;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+    h4{
+        font-size: 20px;
+    }
 }

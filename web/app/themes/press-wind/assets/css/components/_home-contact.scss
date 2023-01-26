@@ -70,7 +70,8 @@
 
         input[type=submit]{
             grid-row: 7;
-            grid-column: 6;
+            grid-column: 6 / span 3;
+            width: fit-content;
         }
 
         .toast{
@@ -90,6 +91,74 @@
             }
         }
     }
+}
+
+@media screen and (max-width: $large) { 
+    .contact{    
+        &_content{
+            grid-column: span 6;
+            grid-row: 1;
+
+            p{
+                margin: 1rem 0;
+            }
+        }
+    
+        &_form{    
+            &_surname{
+                grid-column: span 6;
+                grid-row: 2;
+            }
+    
+            &_name{
+                grid-column: span 6;
+                grid-row: 3;            }
+    
+            &_mail{
+                grid-column: span 6;
+                grid-row: 4;
+            }
+    
+            &_phone{
+                grid-column: span 6;
+                grid-row: 5;
+            }
+    
+            .line{
+                grid-column: span 6;
+                grid-row: 6;
+                margin: 1rem 0;
+            }
+    
+            &_subject{
+                grid-column: span 6;
+                grid-row: 7;
+            }
+    
+            &_message{
+                grid-column: span 6;
+                grid-row: 8;
+            }
+    
+            &_checkbox{
+                grid-column: span 6;
+                grid-row: 9;
+                margin: .5rem 0;
+                align-items: start;
+            }
+    
+            input[type=submit]{
+                grid-column: span 3;
+                grid-row: 10;
+            }
+    
+            .toast{
+                grid-column: span 6;
+                grid-row: 11;
+            }
+        }
+    }
+    
 }
 
 @keyframes toast {

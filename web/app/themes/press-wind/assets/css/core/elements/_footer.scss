@@ -71,3 +71,34 @@
         }
     }
 }
+
+@media screen and (max-width: $large) { 
+    .footer{
+        margin-top: 4rem;
+        padding: 2rem 0;
+        &_logo{
+            display: none;
+        }
+    
+        &_content{   
+            display: none;
+        }
+    
+        &_networks{
+            grid-column: 1 / span 3;
+            grid-row: 1;
+        }
+    
+        address{
+            grid-column: 4 / span 3;
+            grid-row: 1;
+            justify-self: end;
+            text-align: end;
+        }
+    
+        &_infos{
+            grid-column: span 6;
+            grid-row: 2;
+        }
+    }
+}
