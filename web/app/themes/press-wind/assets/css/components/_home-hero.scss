@@ -1,6 +1,7 @@
 .home-page{
     .hero{
         height: 100vh;  
+        min-height: 800px;
         background-image: url("../../../../../../app/themes/press-wind/assets/media/hero-bg.jpg");
         background-position: center 0;
         display: flex;
